@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react'
-import { RiSearchLine } from 'react-icons/ri'
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react'
+import { RiNotification2Line, RiSearchLine, RiUserAddLine } from 'react-icons/ri'
 
 
 export function Header() {
@@ -13,13 +13,15 @@ export function Header() {
             mt="4"
             px="6"
             align="center"
+            
         >
+            
             <Text
                 fontSize='3xl'
                 fontWeight='bold'
                 letterSpacing='tight'
                 w='64'
-            >
+            > 
                 israel tavares
                 <Text as='span' ml='1' color='pink.500'>.</Text>
             </Text>
@@ -47,7 +49,39 @@ export function Header() {
                 />
                 <Icon as={RiSearchLine} />
 
-            </Flex> 
+            </Flex>
+
+            <Flex
+                align='center'
+                ml='auto'
+            >
+                <HStack
+                    spacing='4'
+                    mx='8'
+                    pr='8'
+                    py='1'
+                    color='gray.300'
+                    borderRightWidth={1}
+                    borderColor='gray.700'
+                >
+                    <Icon as={RiNotification2Line} fontSize='20' />
+                    <Icon as={RiUserAddLine} fontSize='20' />
+                </HStack>
+                <Flex
+                    align='center'
+                >
+                    <Box mr='4' textAlign='right' >
+                        <Text>Israel Tavares</Text>
+                        <Text
+                          color='gray.300'
+                          fontSize='small'>
+                            israelbulcaotavares@gmail.com</Text>
+                    </Box>
+
+                    <Avatar size='md' name='Israel Tavares' src='https://github.com/israelbulcaotavares.png' />
+
+                </Flex>
+            </Flex>
         </Flex>
     );
 }
