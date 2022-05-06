@@ -6,9 +6,9 @@ interface PaginationItemProps {
 
 }
 
-export function PaginationItem({ 
-    isCurrent = false, 
-    number 
+export function PaginationItem({
+    isCurrent = false,
+    number
 }: PaginationItemProps) {
     if (isCurrent) {
         return (
@@ -25,7 +25,7 @@ export function PaginationItem({
             >
                 {number}
             </Button>
-        ) 
+        )
     }
 
     return (
